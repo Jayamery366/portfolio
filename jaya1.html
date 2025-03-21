@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaya Mery</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header-content img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .project, .experience {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .skills-container span {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #66ccff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Jaya Mery Profile Picture">
+            <div class="header-text">
+                <h1>Jaya Mery</h1>
+                <p>IT Undergraduate | Web Development | IoT | Python</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#motto">Motto</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="motto">
+        <h2>"Passionate about technology and innovation."</h2>
+        <p>Aspiring IT professional eager to apply technical knowledge and problem-solving skills.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid-container">
+            <div class="project">
+                <h3>E-Commerce Platform</h3>
+                <p>Developed an e-commerce platform using web technologies.</p>
+            </div>
+            <div class="project">
+                <h3>Sensor Value Monitoring & IoT</h3>
+                <p>Designed a real-time system for data tracking and control.</p>
+            </div>
+            <div class="project">
+                <h3>Quiz Website Based on Age</h3>
+                <p>Built a full-stack web application for personalized quizzes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <span>C</span> <span>Python</span> <span>Java</span> <span>Web Development</span>
+            <span>MySQL</span> <span>Communication Skills</span> <span>Creativity</span>
+            <span>Time Management</span> <span>Research & Analysis</span>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience">
+            <h3>Cisco Networking Academy</h3>
+            <p>Completed three networking courses.</p>
+        </div>
+        <hr>
+        <div class="experience">
+            <h3>Eduskills - Blue Prism</h3>
+            <p>10-week virtual internship program in automation.</p>
+        </div>
+        <hr>
+        <div class="experience">
+            <h3>Smart Home & Industrial Solutions</h3>
+            <p>2-week hands-on training program in AIoT.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:tjayamery366@gmail.com">tjayamery366@gmail.com</a></p>
+        <p>Location: Challapalli, Andhra Pradesh</p>
+    </footer>
+</body>
+</html>
