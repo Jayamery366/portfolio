@@ -5,87 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaya Mery</title>
     <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .header-content img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            list-style: none;
-            padding: 10px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 50px;
-            text-align: center;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .project, .experience {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        .skills-container span {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        footer a {
-            color: #66ccff;
-        }
-    </style>
+    /* General Styles */
+:root {
+    --primary: #4A90E2;  /* Soft Blue */
+    --accent: #F76C6C;   /* Vibrant Coral */
+    --bg-light: #FAF3E0; /* Light Cream */
+    --text-dark: #2C3E50; /* Deep Navy */
+    --white: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Logo */
+.header-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.header-content img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    padding: 15px;
+    background: var(--primary);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Cards */
+.project, .experience {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover, .experience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow);
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.skills-container span {
+    background: var(--accent);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.skills-container span:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="profile.jpg" alt="Jaya Mery Profile Picture">
+            <img src="j11.jpg" alt="Profile Picture">
             <div class="header-text">
                 <h1>Jaya Mery</h1>
                 <p>IT Undergraduate | Web Development | IoT | Python</p>
